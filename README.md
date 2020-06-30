@@ -10,7 +10,7 @@ OffMap uses Leaflet to provide the maos, and requires a mapbox api key to operat
 Their are a few examples of my uses for OffMap, check out example.html for complete usage. I created OffMap to show the status of my different server locations on my personal website.<br />
 <br />
 First, include the JavaScript: <br />
-`<script src="offmap.js"` <br />
+`<script src="offmap.js"></script>` <br />
 Make sure that Leaflet is already included in your site, check their site to find out how.
 <br /><br />
 Next, setup your locations:<br />
@@ -22,7 +22,7 @@ Next, setup your locations:<br />
 <br />
 <br />
 Finally, make a map instance of Leaflet, and turn it into an offmap: <br />
-`var mymap = L.map('pmap').setView([<starting lat>, <starting long>], 13);
+`var mymap = L.map('pmap').setView([YOUR STARTING LAT, YOUR STARTING LONG], 13);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -30,10 +30,10 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   id: 'mapbox/streets-v11',
   tileSize: 512,
   zoomOffset: -1,
-  accessToken: '<your long access token>'
+  accessToken: 'YOUR LONG ACCESS TOKEN'
 }).addTo(mymap);
 
-mymap.setZoom(<zoom level, i like 8>);`
+mymap.setZoom(YOUR ZOOM LEVEL, I LIKE EIGHT);`
 <br />
 <br />
 Your instance of offmap should now work, refer to the Leaflet website for more detailed map-setup.
