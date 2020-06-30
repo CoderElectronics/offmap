@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+
+        <script src="offmap.js"></script>
+
+        <style>
+            #pmap { 
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                height: 100%;
+                width:100%;
+             }
+        </style>
+    </head> 
+    <body>
+        <div id="pmap"></div>
+
+        <script>
+            var mymap = L.map('pmap').setView([37.304262, -122.060112], 13);
+
+            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                maxZoom: 18,
+                id: 'mapbox/streets-v11',
+                tileSize: 512,
+                zoomOffset: -1,
+                accessToken: 'pk.eyJ1IjoiY29kZXJlbGVjdHJvbmljcyIsImEiOiJja2MxeGdqZHIxeTNkMnpxZG53YWd1ODNhIn0.ATnf8zX2u_ZFTK6iOu3DkA'
+            }).addTo(mymap);
+
+            mymap.setZoom(8);
+
+            var pinglist = [
+                {"location": [37.422119, -122.082287], "formalname": "googleplex", "formatname": "The Google Plex", "pingsite": "google.com"},
+                {"location": [37.332170, -122.029771], "formalname": "infiniteloop", "formatname": "Apple Park", "pingsite": "apple.com/"}
+            ];
+
+            new OffMap(mymap, pinglist);
+        </script>
+    </body>   
+</html>
