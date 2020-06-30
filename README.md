@@ -15,9 +15,9 @@ Make sure that Leaflet is already included in your site, check their site to fin
 <br /><br />
 Next, setup your locations:<br />
 `var pinglist = [
-                  <lat>       <long>                      <formal name>               <formatted name>               <ip / url>
-     {"location": [37.422119, -122.082287], "formalname": "googleplex", "formatname": "The Google Plex", "pingsite": "google.com"},
-     {"location": [37.332170, -122.029771], "formalname": "infiniteloop", "formatname": "Apple Park", "pingsite": "apple.com/"}
+                  <lat>       <long>                      <formal name>               <formatted name>               <ip / url>  
+     {"location": [37.422119, -122.082287], "formalname": "googleplex", "formatname": "The Google Plex", "pingsite": "google.com"},   
+     {"location": [37.332170, -122.029771], "formalname": "infiniteloop", "formatname": "Apple Park", "pingsite": "apple.com/"}   
 ];`
 <br />
 <br />
@@ -25,7 +25,7 @@ Finally, make a map instance of Leaflet, and turn it into an offmap: <br />
 `var mymap = L.map('pmap').setView([YOUR STARTING LAT, YOUR STARTING LONG], 13);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  attribution: 'YOUR ATTRIBUTION',
   maxZoom: 18,
   id: 'mapbox/streets-v11',
   tileSize: 512,
