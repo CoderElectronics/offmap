@@ -13,17 +13,16 @@ First, include the JavaScript: <br />
 `<script src="offmap.js"` <br />
 Make sure that Leaflet is already included in your site, check their site to find out how.
 <br /><br />
-Next, setup your locations:
+Next, setup your locations:<br />
 `var pinglist = [
                   <lat>       <long>                      <formal name>               <formatted name>               <ip / url>
      {"location": [37.422119, -122.082287], "formalname": "googleplex", "formatname": "The Google Plex", "pingsite": "google.com"},
      {"location": [37.332170, -122.029771], "formalname": "infiniteloop", "formatname": "Apple Park", "pingsite": "apple.com/"}
-];
-`<br />
+];`
+<br />
 <br />
 Finally, make a map instance of Leaflet, and turn it into an offmap: <br />
-`
-var mymap = L.map('pmap').setView([<starting lat>, <starting long>], 13);
+`var mymap = L.map('pmap').setView([<starting lat>, <starting long>], 13);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -34,7 +33,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   accessToken: '<your long access token>'
 }).addTo(mymap);
 
-mymap.setZoom(<zoom level, i like 8>);
-`<br />
+mymap.setZoom(<zoom level, i like 8>);`
+<br />
 <br />
 Your instance of offmap should now work, refer to the Leaflet website for more detailed map-setup.
