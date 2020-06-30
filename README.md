@@ -19,7 +19,6 @@ Make sure that Leaflet is already included in your site, check their site to fin
 Next, setup your locations:<br />
 ```javascript
 var pinglist = [
-                  <lat>       <long>                      <formal name>               <formatted name>               <ip / url>  
      {"location": [37.422119, -122.082287], "formalname": "googleplex", "formatname": "The Google Plex", "pingsite": "google.com"},   
      {"location": [37.332170, -122.029771], "formalname": "infiniteloop", "formatname": "Apple Park", "pingsite": "apple.com/"}   
 ];
