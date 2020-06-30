@@ -10,19 +10,19 @@ OffMap uses Leaflet to provide the maos, and requires a mapbox api key to operat
 Their are a few examples of my uses for OffMap, check out example.html for complete usage. I created OffMap to show the status of my different server locations on my personal website.<br />
 <br />
 First, include the JavaScript: <br />
-`<script src="offmap.js"></script>` <br />
+```<script src="offmap.js"></script>``` <br />
 Make sure that Leaflet is already included in your site, check their site to find out how.
 <br /><br />
 Next, setup your locations:<br />
-`var pinglist = [
+```var pinglist = [
                   <lat>       <long>                      <formal name>               <formatted name>               <ip / url>  
      {"location": [37.422119, -122.082287], "formalname": "googleplex", "formatname": "The Google Plex", "pingsite": "google.com"},   
      {"location": [37.332170, -122.029771], "formalname": "infiniteloop", "formatname": "Apple Park", "pingsite": "apple.com/"}   
-];`
+];```
 <br />
 <br />
 Finally, make a map instance of Leaflet, and turn it into an offmap: <br />
-`var mymap = L.map('pmap').setView([YOUR STARTING LAT, YOUR STARTING LONG], 13);
+```var mymap = L.map('pmap').setView([YOUR STARTING LAT, YOUR STARTING LONG], 13);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
   attribution: 'YOUR ATTRIBUTION',
@@ -33,7 +33,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   accessToken: 'YOUR LONG ACCESS TOKEN'
 }).addTo(mymap);
 
-mymap.setZoom(YOUR ZOOM LEVEL, I LIKE EIGHT);`
+mymap.setZoom(YOUR ZOOM LEVEL, I LIKE EIGHT);```
 <br />
 <br />
 Your instance of offmap should now work, refer to the Leaflet website for more detailed map-setup.
