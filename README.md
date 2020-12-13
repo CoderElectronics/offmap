@@ -4,7 +4,7 @@ OffMap is an easy way to visualize a network of connected devices, such as datac
 linked to their names and ip addresses, OffMap will automatically place diffrently colored markers on a map that will automatically ping their respective ip addresses to check if they are online.
 
 # Dependencies
-OffMap uses Leaflet to provide the maos, and requires a mapbox api key to operate.
+OffMap uses Leaflet to provide the maps, and requires a mapbox api key to operate.
 
 # Using OffMap
 Their are a few examples of my uses for OffMap, check out example.html for complete usage. I created OffMap to show the status of my different server locations on my personal website.<br />
