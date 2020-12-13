@@ -38,7 +38,9 @@ Finally, make a map instance of Leaflet, and turn it into an offmap: <br />
       accessToken: 'YOUR LONG ACCESS TOKEN'
     }).addTo(mymap);
     
-    mymap.setZoom(YOUR ZOOM LEVEL, I LIKE EIGHT);
+    mymap.setZoom(YOUR ZOOM LEVEL);
+    
+    new OffMap(mymap, pinglist);
 <br />
 <br />
 Your instance of offmap should now work, refer to the Leaflet website for more detailed map-setup.
